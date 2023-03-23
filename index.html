@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal open & close</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            background-color: #a2b3b8;
+        }
+        .btn{
+            background-color: #315964;
+            color: azure;
+            border-radius: 42px;
+            border-width: 0;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 15px 15px;
+        }
+        .btn:hover{
+            background-color: #193f49;
+        }
+        .modal{ 
+            display: none;
+            width: 400px;  
+            background-color: #8a999e;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+
+            position: absolute;
+            transform: 1s;
+        }
+        .modal .btn {
+            font-size: 15px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container" >
+        <button class="btn" onclick="openModal()">click me</button>
+        <div class="modal" id = "modal">
+            <h2>I'm a Modal/Popup</h2><br>
+            <p>A modal is a dialog box/popup window that is displayed on top of the current page</p><br>
+            <button class="btn" onclick="closeModal()">close me</button>
+        </div>
+
+    </div>
+    
+    
+    <script>
+        let modal = document.getElementById("modal");
+
+        function openModal(){
+            modal.style.display = "block";
+        }
+        function closeModal(){
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
